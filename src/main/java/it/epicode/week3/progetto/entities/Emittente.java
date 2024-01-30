@@ -1,35 +1,33 @@
 package it.epicode.week3.progetto.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
-
-public class Emittente {
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Emittente {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenza_emittenti")
+    @SequenceGenerator(name = "sequenza_emittenti", initialValue = 1, allocationSize = 1)
+    private long id;
     private String luogo;
-    private String titoli;
+    @OneToMany(mappedBy = "emittente")
+    private List<TitoloDiViaggio> titoli;
 
     public Emittente() {
     }
 
-    public Emittente(Long id, String luogo, String titoli, List<Distributore> distributori, List<Rivenditore> rivenditori) {
+    public Emittente(Long id, String luogo, List<TitoloDiViaggio> titoli) {
         this.id = id;
         this.luogo = luogo;
         this.titoli = titoli;
-        this.distributori = distributori;
-        this.rivenditori = rivenditori;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -41,44 +39,21 @@ public class Emittente {
         this.luogo = luogo;
     }
 
-    public String getTitoli() {
+    public List<TitoloDiViaggio> getTitoli() {
         return titoli;
     }
 
-    public void setTitoli(String titoli) {
+    public void setTitoli(List<TitoloDiViaggio> titoli) {
         this.titoli = titoli;
     }
 
-    public List<Distributore> getDistributori() {
-        return distributori;
-    }
-
-    public void setDistributori(List<Distributore> distributori) {
-        this.distributori = distributori;
-    }
-
-    public List<Rivenditore> getRivenditori() {
-        return rivenditori;
-    }
-
-    public void setRivenditori(List<Rivenditore> rivenditori) {
-        this.rivenditori = rivenditori;
-    }
 
     @Override
     public String toString() {
-        return "Emittente{" +
-                "id=" + id +
+        return  "id=" + id +
                 ", luogo='" + luogo + '\'' +
-                ", titoli='" + titoli + '\'' +
-                ", distributori=" + distributori +
-                ", rivenditori=" + rivenditori +
-                '}';
+                ", titoli='" + titoli;
     }
 
-    @OneToMany (mappedBy = "emittente")
-    private List<Distributore> distributori;
 
-    @OneToMany (mappedBy = "emittente")
-    private List<Rivenditore> rivenditori;
 }

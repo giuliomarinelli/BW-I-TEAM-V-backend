@@ -3,6 +3,7 @@ package it.epicode.week3.progetto.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "viaggi")
@@ -13,16 +14,18 @@ public class Viaggio {
             "viaggio_id_gen", schema = "public", initialValue = 1, allocationSize = 1)
     private int id;
     @ManyToOne
-    @JoinColumn(name = "viaggio_id")
+    @JoinColumn(name = "tratta_id")
     Tratta tratta;
 
     @ManyToMany(mappedBy = "viaggi")
     private List<TitoloDiViaggio> titoliDiViaggio;
     @ManyToOne
     @JoinColumn(name = "mezzo_id")
-    Mezzo mezzo;
+    private Mezzo mezzo;
+
     @Column(name = "orario_di_partenza")
     private LocalDateTime orarioDiPartenza; // corrisponde con l'orario in cui il biglietto è vidimato. Per adesso ho usato LocalDateTime, poi vedremo insieme come gestire la tipizzazione
+    @Column(name = "tempo_effettivo_percorrenza")
     private int tempoEffettivoPercorrenza;  // in minuti, o meglio usare LocalTime?
 
 

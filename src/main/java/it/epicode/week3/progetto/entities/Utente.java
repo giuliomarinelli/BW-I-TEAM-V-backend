@@ -14,6 +14,7 @@ public class Utente {
     private int id;
     private String nome;
     private String cognome;
+    @Enumerated(EnumType.STRING)
     private Sesso sesso;
 
     @Column(name = "data_nascita")

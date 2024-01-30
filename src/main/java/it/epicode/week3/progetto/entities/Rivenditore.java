@@ -2,28 +2,21 @@ package it.epicode.week3.progetto.entities;
 
 import jakarta.persistence.*;
 
-public class Rivenditore {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+import java.util.List;
+
+@Entity
+@Table(name = "rivenditori")
+public class Rivenditore extends Emittente {
+
 
     private boolean aperto;
 
     public Rivenditore() {
     }
 
-    public Rivenditore(Long id, boolean aperto, Emittente emittente) {
-        this.id = id;
+    public Rivenditore(Long id, String luogo, List<TitoloDiViaggio> titoli, boolean aperto) {
+        super(id, luogo, titoli);
         this.aperto = aperto;
-        this.emittente = emittente;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public boolean isAperto() {
@@ -34,24 +27,9 @@ public class Rivenditore {
         this.aperto = aperto;
     }
 
-    public Emittente getEmittente() {
-        return emittente;
-    }
-
-    public void setEmittente(Emittente emittente) {
-        this.emittente = emittente;
-    }
-
     @Override
     public String toString() {
-        return "Rivenditore{" +
-                "id=" + id +
-                ", aperto=" + aperto +
-                ", emittente=" + emittente +
-                '}';
+        return super.toString() +
+                ", aperto=" + aperto;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "emittente_id")
-    private Emittente emittente;
 }

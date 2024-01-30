@@ -10,7 +10,6 @@ public abstract class Mezzo {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenza_mezzo")
     @SequenceGenerator(name = "sequenza_mezzo", initialValue = 1, allocationSize = 1)
-
     private int id;
     private int capienza;
     @OneToMany(mappedBy = "mezzo")

@@ -3,10 +3,11 @@ package it.epicode.week3.progetto.entities;
 import jakarta.persistence.Column;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
-public class Biglietto extends TitoloDiViaggio{
+public class Biglietto extends TitoloDiViaggio {
     @Column(name = "minuti_validita")
-    private int minutiValidita = 120;
+    private final int minutiValidita = 120;
 
     public Biglietto() {}
 
@@ -17,10 +18,6 @@ public class Biglietto extends TitoloDiViaggio{
 
     public int getMinutiValidita() {
         return minutiValidita;
-    }
-
-    public void setMinutiValidita(int minutiValidita) {
-        this.minutiValidita = minutiValidita;
     }
 
     @Override

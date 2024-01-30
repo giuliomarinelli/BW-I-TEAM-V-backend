@@ -13,7 +13,7 @@ public abstract class TitoloDiViaggio {
     @SequenceGenerator(name = "sequenza_titoli_di_viaggio", initialValue = 1, allocationSize = 1)
     private int id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_emittente")
     private Emittente emittente;
 

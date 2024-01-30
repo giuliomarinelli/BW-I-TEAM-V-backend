@@ -24,8 +24,8 @@ public class Tratta {
     @OneToMany(mappedBy = "tratta")
     private List<Mezzo> mezzi;
 
-//    @OneToMany(mappedBy = "") // Ho bisogno del nome della proprietà che referenzia la relazione
-//    private List<Tratta> viaggi;
+    @OneToMany(mappedBy = "tratta") // Ho bisogno del nome della proprietà che referenzia la relazione
+    private List<Viaggio> viaggi;
 
     public Tratta() {}
 

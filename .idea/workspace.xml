@@ -4,25 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/Main.java" afterDir="false" />
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="firs_common pushed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Manutenzione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Abbonamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Abbonamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Biglietto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Biglietto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Distributore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Distributore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Emittente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Emittente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Mezzo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Mezzo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Rivenditore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Rivenditore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/TitoloDiViaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/TitoloDiViaggio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Tratta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Tratta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Viaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Viaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2bcyXYynaSMQGkcD2IA6KScM5Qs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "common__first",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/resources",
     "onboarding.tips.debug.path": "C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/java/it/epicode/week3/progetto/Main.java"
@@ -53,7 +66,20 @@
       <option name="presentableId" value="Default" />
       <updated>1706528702934</updated>
     </task>
+    <task id="LOCAL-00001" summary="firs_common pushed">
+      <option name="closed" value="true" />
+      <created>1706604330481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706604330481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="firs_common pushed" />
+    <option name="LAST_COMMIT_MESSAGE" value="firs_common pushed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
