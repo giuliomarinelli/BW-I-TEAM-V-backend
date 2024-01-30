@@ -13,7 +13,7 @@ public class Abbonamento extends TitoloDiViaggio{
     private DurataAbbonamento durata;
 
     @OneToMany
-    @JoinColumn(name = "id_tessera")
+    @JoinColumn(name = "id_tessera")//fhjk
     private Tessera tessera;
 
     public Abbonamento(){}
