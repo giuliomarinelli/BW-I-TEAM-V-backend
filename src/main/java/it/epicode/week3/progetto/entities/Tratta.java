@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "viaggi")
+@Table(name = "tratte")
 public class Tratta {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tratta_id_gen")
@@ -24,8 +24,8 @@ public class Tratta {
     @OneToMany(mappedBy = "tratta")
     private List<Mezzo> mezzi;
 
-    @OneToMany(mappedBy = "?") // Ho bisogno del nome della proprietà che referenzia la relazione
-    private List<Viaggio> viaggi;
+//    @OneToMany(mappedBy = "") // Ho bisogno del nome della proprietà che referenzia la relazione
+//    private List<Tratta> viaggi;
 
     public Tratta() {}
 

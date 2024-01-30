@@ -16,6 +16,8 @@ public class Viaggio {
     @JoinColumn(name = "viaggio_id")
     Tratta tratta;
 
+    @ManyToMany(mappedBy = "viaggi")
+    private List<TitoloDiViaggio> titoliDiViaggio;
     @ManyToOne
     @JoinColumn(name = "mezzo_id")
     Mezzo mezzo;
@@ -23,8 +25,6 @@ public class Viaggio {
     private LocalDateTime orarioDiPartenza; // corrisponde con l'orario in cui il biglietto è vidimato. Per adesso ho usato LocalDateTime, poi vedremo insieme come gestire la tipizzazione
     private int tempoEffettivoPercorrenza;  // in minuti, o meglio usare LocalTime?
 
-    @OneToMany(mappedBy = "?")  // ho bisogno del nome della proprietà presente in TitoloDiViaggio che referenzia la relazione
-    List<TitoloDiViaggio> titoliDiViaggio;
 
     public Viaggio() {}
 
