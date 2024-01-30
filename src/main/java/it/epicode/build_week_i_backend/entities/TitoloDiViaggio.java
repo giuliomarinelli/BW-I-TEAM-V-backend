@@ -1,8 +1,7 @@
-package it.epicode.week3.progetto.entities;
+package it.epicode.build_week_i_backend.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package it.epicode.week3.progetto.Dao;
+package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Tratta;
+import it.epicode.build_week_i_backend.entities.Tratta;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;

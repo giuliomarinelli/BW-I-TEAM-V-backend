@@ -1,6 +1,5 @@
-package it.epicode.week3.progetto.Dao;
+package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Rivenditore;
 import jakarta.persistence.*;
 
 public class DistributoreDao {

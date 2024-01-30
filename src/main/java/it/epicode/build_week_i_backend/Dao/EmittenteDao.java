@@ -1,18 +1,14 @@
-package it.epicode.week3.progetto.dao;
+package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Rivenditore;
 import jakarta.persistence.*;
 
-public class RivenditoreDao {
+public class EmittenteDao {
     private EntityManagerFactory emf;
     private EntityManager em;
 
-    public RivenditoreDao (){
+    public EmittenteDao (){
         emf = Persistence.createEntityManagerFactory("trasporto_pubblico_jpa");
         em= emf.createEntityManager();
 
 
-        }
-
-    }
-
+    }}

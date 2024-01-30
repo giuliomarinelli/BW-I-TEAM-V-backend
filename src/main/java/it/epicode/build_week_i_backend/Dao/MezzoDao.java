@@ -1,6 +1,6 @@
-package it.epicode.week3.progetto.dao;
+package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Mezzo;
+import it.epicode.build_week_i_backend.entities.Mezzo;
 import jakarta.persistence.*;
 
 

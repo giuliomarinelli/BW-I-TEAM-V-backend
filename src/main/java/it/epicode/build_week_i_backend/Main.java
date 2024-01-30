@@ -1,4 +1,4 @@
-package it.epicode.week3.progetto;
+package it.epicode.build_week_i_backend;
 
 import it.epicode.week3.progetto.dao.EmittenteDao;
 

@@ -1,4 +1,4 @@
-package it.epicode.week3.progetto.entities;
+package it.epicode.build_week_i_backend.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

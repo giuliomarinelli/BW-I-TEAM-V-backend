@@ -1,25 +1,25 @@
-package it.epicode.week3.progetto.dao;
+package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Autobus;
+import it.epicode.build_week_i_backend.entities.Autobus;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-public class AutobusDao {
+public class TramDao {
     private EntityManagerFactory emf;
     private EntityManager em;
 
-    public AutobusDao(){
+    public TramDao(){
         emf = Persistence.createEntityManagerFactory("trasporto_pubblico_jpa");
         em = emf.createEntityManager();
     }
 
-    public void save(AutobusDao a){
+    public void save(TramDao t){
         EntityTransaction et = em.getTransaction();
         et.begin();
 
-        em.persist(a);
+        em.persist(t);
 
         et.commit();
     }
