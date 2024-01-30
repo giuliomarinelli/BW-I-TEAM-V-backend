@@ -2,9 +2,7 @@ package it.epicode.week3.progetto.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 public abstract class TitoloDiViaggio {
@@ -13,7 +11,7 @@ public abstract class TitoloDiViaggio {
     @SequenceGenerator(name = "sequenza_titoli_di_viaggio", initialValue = 1, allocationSize = 1)
     private int id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_emittente")
     private Emittente emittente;
 

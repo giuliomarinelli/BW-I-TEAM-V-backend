@@ -1,19 +1,15 @@
 package it.epicode.week3.progetto.entities;
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public class Abbonamento extends TitoloDiViaggio{
     @Enumerated(EnumType.STRING)
     private DurataAbbonamento durata;
 
-    @OneToMany
-    @JoinColumn(name = "id_tessera")//fhjk
+    @ManyToOne
+    @JoinColumn(name = "id_tessera")
     private Tessera tessera;
 
     public Abbonamento(){}
