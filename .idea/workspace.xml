@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="merge first debug">
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="push">
+      <change afterPath="$PROJECT_DIR$/src/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/Dao/DistributoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/Dao/DistributoreDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/DistributoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/DistributoreDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/EmittenteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/EmittenteDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706609032340</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="push">
+      <option name="closed" value="true" />
+      <created>1706610021507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706610021507</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="firs_common pushed" />
     <MESSAGE value="merge first debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge first debug" />
+    <MESSAGE value="push" />
+    <option name="LAST_COMMIT_MESSAGE" value="push" />
   </component>
 </project>

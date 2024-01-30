@@ -1,4 +1,4 @@
-package it.epicode.week3.progetto.dao;
+package it.epicode.week3.progetto.Dao;
 
 import it.epicode.week3.progetto.entities.Rivenditore;
 import jakarta.persistence.*;
