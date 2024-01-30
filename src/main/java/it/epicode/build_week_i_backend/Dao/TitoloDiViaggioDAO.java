@@ -7,6 +7,8 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
+import java.time.LocalDateTime;
+
 public class TitoloDiViaggioDAO {
     EntityManagerFactory emf;
     EntityManager em;
@@ -40,10 +42,15 @@ public class TitoloDiViaggioDAO {
     }
 
     public void vidimaTitolo(int id, Viaggio v){
+        TitoloDiViaggio t = getById(id);
+        if (t.getDataAttivazione() != null) {
+            System.out.println("Il titolo di viaggio è già stato vidimato");
+            return;
+        }
+        t.setDataAttivazione(LocalDateTime.now());
         EntityTransaction et = em.getTransaction();
         et.begin();
-        TitoloDiViaggio t = getById(id);
-        t.getViaggi().remove(1);
+        t.getViaggi().add(v);
         em.persist(t);
         et.commit();
     }
