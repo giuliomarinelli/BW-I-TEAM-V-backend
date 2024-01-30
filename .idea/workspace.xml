@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="ok">
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="renamed package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Main.java" afterDir="false" />
     </list>
@@ -27,6 +27,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "giuliomarinelli"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9d9b718c-7832-41d2-b839-4b8efaff6162" />
+        <option name="url" value="https://github.com/giuliomarinelli/BW-I-TEAM-V-backend" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -119,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706610555082</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="renamed package">
+      <option name="closed" value="true" />
+      <created>1706610682285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706610682285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,6 +149,7 @@
     <MESSAGE value="merge first debug" />
     <MESSAGE value="push" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="renamed package" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed package" />
   </component>
 </project>
