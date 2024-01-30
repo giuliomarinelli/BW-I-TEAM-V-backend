@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/TitoloDiViaggioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Abbonamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/Abbonamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/TitoloDiViaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/entities/TitoloDiViaggio.java" afterDir="false" />
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="commit dao">
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/TitoloDiViaggioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/week3/progetto/dao/TitoloDiViaggioDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +108,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primo commit Gabriele" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
