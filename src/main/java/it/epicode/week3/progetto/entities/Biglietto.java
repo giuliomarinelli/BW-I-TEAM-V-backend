@@ -6,13 +6,13 @@ import java.time.LocalDateTime;
 
 public class Biglietto extends TitoloDiViaggio{
     @Column(name = "minuti_validita")
-    private int minutiValidita;
+    private int minutiValidita = 120;
 
     public Biglietto() {}
 
     public Biglietto(int id, Emittente emittente, LocalDateTime dataEmissione, LocalDateTime dataAttivazione, List<Viaggio> viaggi) {
         super(id, emittente, dataEmissione, dataAttivazione, viaggi);
-        this.minutiValidita = 120;
+        setDataScadenza(getDataAttivazione().plusMinutes(minutiValidita));
     }
 
     public int getMinutiValidita() {
@@ -21,6 +21,12 @@ public class Biglietto extends TitoloDiViaggio{
 
     public void setMinutiValidita(int minutiValidita) {
         this.minutiValidita = minutiValidita;
+    }
+
+    @Override
+    public void setDataAttivazione(LocalDateTime dataAttivazione) {
+        super.setDataAttivazione(dataAttivazione);
+        setDataScadenza(getDataAttivazione().plusMinutes(minutiValidita));
     }
 
     @Override

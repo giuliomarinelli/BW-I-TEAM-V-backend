@@ -20,6 +20,11 @@ public class Abbonamento extends TitoloDiViaggio{
 
     public Abbonamento(int id, Emittente emittente, LocalDateTime dataEmissione, LocalDateTime dataAttivazione, List<Viaggio> viaggi, DurataAbbonamento durata, Tessera tessera) {
         super(id, emittente, dataEmissione, dataAttivazione, viaggi);
+        if (durata == DurataAbbonamento.SETTIMANALE) {
+            setDataAttivazione(getDataAttivazione().plusDays(7));
+        } else {
+            setDataAttivazione(getDataAttivazione().plusDays(30));
+        }
         this.durata = durata;
         this.tessera = tessera;
     }
@@ -38,6 +43,16 @@ public class Abbonamento extends TitoloDiViaggio{
 
     public void setTessera(Tessera tessera) {
         this.tessera = tessera;
+    }
+
+    @Override
+    public void setDataAttivazione(LocalDateTime dataAttivazione) {
+        super.setDataAttivazione(dataAttivazione);
+        if (durata == DurataAbbonamento.SETTIMANALE) {
+            setDataAttivazione(getDataAttivazione().plusDays(7));
+        } else {
+            setDataAttivazione(getDataAttivazione().plusDays(30));
+        }
     }
 
     @Override
