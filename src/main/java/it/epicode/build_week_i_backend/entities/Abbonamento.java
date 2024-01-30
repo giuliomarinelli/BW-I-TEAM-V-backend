@@ -48,9 +48,9 @@ public class Abbonamento extends TitoloDiViaggio{
     public void setDataAttivazione(LocalDateTime dataAttivazione) {
         super.setDataAttivazione(dataAttivazione);
         if (durata == DurataAbbonamento.SETTIMANALE) {
-            setDataAttivazione(getDataAttivazione().plusDays(7));
+            setDataScadenza(getDataAttivazione().plusDays(7));
         } else {
-            setDataAttivazione(getDataAttivazione().plusDays(30));
+            setDataScadenza(getDataAttivazione().plusDays(30));
         }
     }
 
@@ -58,7 +58,6 @@ public class Abbonamento extends TitoloDiViaggio{
     public String toString() {
         return "Abbonamento{" +
                 "durata=" + durata +
-                ", tessera=" + tessera +
                 '}';
     }
 }

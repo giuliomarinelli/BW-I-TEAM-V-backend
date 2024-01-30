@@ -1,6 +1,7 @@
 package it.epicode.build_week_i_backend.Dao;
 
 import it.epicode.build_week_i_backend.entities.TitoloDiViaggio;
+import it.epicode.build_week_i_backend.entities.Viaggio;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
@@ -35,6 +36,15 @@ public class TitoloDiViaggioDAO {
         et.begin();
         TitoloDiViaggio t = getById(id);
         em.remove(t);
+        et.commit();
+    }
+
+    public void vidimaTitolo(int id, Viaggio v){
+        EntityTransaction et = em.getTransaction();
+        et.begin();
+        TitoloDiViaggio t = getById(id);
+        t.getViaggi().remove(1);
+        em.persist(t);
         et.commit();
     }
 }

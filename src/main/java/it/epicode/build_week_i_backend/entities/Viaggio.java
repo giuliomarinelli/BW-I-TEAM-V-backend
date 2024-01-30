@@ -19,6 +19,7 @@ public class Viaggio {
 
     @ManyToMany(mappedBy = "viaggi")
     private List<TitoloDiViaggio> titoliDiViaggio;
+
     @ManyToOne
     @JoinColumn(name = "mezzo_id")
     private Mezzo mezzo;

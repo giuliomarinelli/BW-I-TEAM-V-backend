@@ -2,6 +2,7 @@ package it.epicode.build_week_i_backend.Dao;
 
 
 import it.epicode.build_week_i_backend.entities.Manutenzione;
+import it.epicode.build_week_i_backend.entities.TitoloDiViaggio;
 import it.epicode.build_week_i_backend.entities.Viaggio;
 import jakarta.persistence.*;
 
