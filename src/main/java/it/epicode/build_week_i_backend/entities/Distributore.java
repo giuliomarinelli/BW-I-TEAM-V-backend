@@ -28,6 +28,11 @@ public class Distributore extends Emittente {
     }
 
     @Override
+    public boolean isActive() {
+        return attivo;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + ", " +
                 "attivo=" + attivo;

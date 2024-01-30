@@ -28,6 +28,11 @@ public class Rivenditore extends Emittente {
     }
 
     @Override
+    public boolean isActive() {
+        return aperto;
+    }
+
+    @Override
     public String toString() {
         return super.toString() +
                 ", aperto=" + aperto;

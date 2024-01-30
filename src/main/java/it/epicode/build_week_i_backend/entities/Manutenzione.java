@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "manutenzioni")
 public class Manutenzione {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenza_manutenzioni")

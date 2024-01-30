@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class TitoloDiViaggio {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenza_titoli_di_viaggio")

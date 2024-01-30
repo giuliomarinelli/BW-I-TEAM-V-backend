@@ -1,10 +1,14 @@
 package it.epicode.build_week_i_backend.entities;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
+@Table(name = "biglietti")
 public class Biglietto extends TitoloDiViaggio {
     @Column(name = "minuti_validita")
     private final int minutiValidita = 120;

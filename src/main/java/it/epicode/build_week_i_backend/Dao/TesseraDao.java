@@ -1,6 +1,7 @@
 package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.build_week_i_backend.entities.Tessera;
+import it.epicode.week3.progetto.entities.Tessera;
+import it.epicode.week3.progetto.entities.Utente;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;

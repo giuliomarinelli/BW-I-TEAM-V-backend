@@ -5,12 +5,14 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
+@Table(name = "abbonamenti")
 public class Abbonamento extends TitoloDiViaggio{
     @Enumerated(EnumType.STRING)
     private DurataAbbonamento durata;
 
     @ManyToOne
-    @JoinColumn(name = "id_tessera")//fhjk
+    @JoinColumn(name = "id_tessera")
     private Tessera tessera;
 
     public Abbonamento(){}

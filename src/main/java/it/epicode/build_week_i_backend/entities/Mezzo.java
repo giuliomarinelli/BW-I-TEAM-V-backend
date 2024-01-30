@@ -20,9 +20,7 @@ public abstract class Mezzo {
     @OneToMany(mappedBy = "mezzo")
     private List<Viaggio> viaggi;
 
-    public Mezzo(){
-
-    }
+    public Mezzo(){}
 
     public Mezzo(int id, int capienza, List<Manutenzione> manutezioni, Tratta tratta, List<Viaggio> viaggi) {
         this.id = id;
@@ -74,12 +72,9 @@ public abstract class Mezzo {
 
     @Override
     public String toString() {
-        return "MezzoDiTrasporto{" +
+        return "Mezzo{" +
                 "id=" + id +
                 ", capienza=" + capienza +
-                ", manutezioni=" + manutezioni +
-                ", tratta=" + tratta +
-                ", viaggi=" + viaggi +
                 '}';
     }
 }

@@ -1,11 +1,13 @@
 package it.epicode.build_week_i_backend.Dao;
 
 
-import it.epicode.build_week_i_backend.entities.Viaggio;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
+import it.epicode.week3.progetto.entities.Manutenzione;
+import it.epicode.week3.progetto.entities.Viaggio;
+import jakarta.persistence.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ViaggioDao {
     private static EntityManagerFactory emf;
@@ -22,6 +24,14 @@ public class ViaggioDao {
     }
 
     public static void save(Viaggio v) {
+        Query query = em.createQuery("SELECT m FROM Manutenzione m WHERE m.mezzo.id = :id");
+        query.setParameter("id", v.getMezzo().getId());
+        List<Manutenzione> lista = query.getResultList();
+        lista = lista.stream().filter(m -> v.getOrarioDiPartenza().isAfter(m.getDataInizio()) && v.getOrarioDiPartenza().isBefore(m.getDatafine())).collect(Collectors.toList());
+        if (lista.size() > 0) {
+            System.out.println("Il mezzo scelto è in manutenzione");
+            return;
+        }
         try {
             EntityTransaction et = em.getTransaction();
             et.begin();

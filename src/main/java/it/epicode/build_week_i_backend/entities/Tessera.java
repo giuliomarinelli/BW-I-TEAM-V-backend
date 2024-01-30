@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "tessera")
+@Table(name = "tessere")
 public class Tessera {
 
     @Id
@@ -28,9 +28,11 @@ public class Tessera {
     @OneToMany(mappedBy = "tessera")// cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     List<Abbonamento> abbonamenti;
 
+    public Tessera(){}
+
     public Tessera(LocalDate dataEmissioneORinnovo, LocalDate dataScadenza, Utente utente, List<Abbonamento> abbonamenti) {
         this.dataEmissioneORinnovo = dataEmissioneORinnovo;
-        this.dataScadenza = dataScadenza;
+        dataScadenza = dataEmissioneORinnovo.plusYears(1);
         this.utente = utente;
         this.abbonamenti = abbonamenti;
     }
@@ -41,7 +43,6 @@ public class Tessera {
                 "id=" + id +
                 ", dataEmissioneORinnovo=" + dataEmissioneORinnovo +
                 ", dataScadenza=" + dataScadenza +
-                ", utente=" + utente +
                 ", abbonamenti=" + abbonamenti +
                 '}';
     }
@@ -60,6 +61,7 @@ public class Tessera {
 
     public void setDataEmissioneORinnovo(LocalDate dataEmissioneORinnovo) {
         this.dataEmissioneORinnovo = dataEmissioneORinnovo;
+        dataScadenza = dataEmissioneORinnovo.plusYears(1);
     }
 
     public LocalDate getDataScadenza() {

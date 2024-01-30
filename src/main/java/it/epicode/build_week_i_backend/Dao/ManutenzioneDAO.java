@@ -1,37 +1,35 @@
 package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Mezzo;
-import jakarta.persistence.*;
+import it.epicode.week3.progetto.entities.Manutenzione;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
 
-
-
-public class MezzoDao {
+public class ManutenzioneDAO {
     private EntityManagerFactory emf;
     private EntityManager em;
 
-    public MezzoDao(){
+    public ManutenzioneDAO(){
         emf = Persistence.createEntityManagerFactory("trasporto_pubblico_jpa");
         em = emf.createEntityManager();
     }
 
-    public void save(Mezzo m){
+    public void save(Manutenzione m){
         EntityTransaction et = em.getTransaction();
         et.begin();
-
         em.persist(m);
-
         et.commit();
     }
 
-    public Mezzo getById(int id){
-        return em.find(Mezzo.class, id);
+    public Manutenzione getById(int id){
+        return em.find(Manutenzione.class, id);
     }
 
     public void delete(int id){
         EntityTransaction et = em.getTransaction();
         et.begin();
-
-        Mezzo m = getById(id);
+        Manutenzione m = getById(id);
         em.remove(m);
         et.commit();
     }
@@ -40,5 +38,4 @@ public class MezzoDao {
         em.close();
         emf.close();
     }
-
 }

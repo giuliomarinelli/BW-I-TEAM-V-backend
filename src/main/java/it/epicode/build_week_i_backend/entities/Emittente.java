@@ -47,6 +47,7 @@ public abstract class Emittente {
         this.titoli = titoli;
     }
 
+    public abstract boolean isActive();
 
     @Override
     public String toString() {
