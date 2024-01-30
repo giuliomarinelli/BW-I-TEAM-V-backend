@@ -24,7 +24,7 @@ public class TitoloDiViaggioDAO {
 
     public TitoloDiViaggio getById(int id){
         return em.find(TitoloDiViaggio.class, id);
-    }//
+    }
 
     public void eliminaTitolo(int id){
         EntityTransaction et = em.getTransaction();
