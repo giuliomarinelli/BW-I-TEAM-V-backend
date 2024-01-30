@@ -14,7 +14,7 @@ public class Distributore extends Emittente {
     public Distributore() {
     }
 
-    public Distributore(Long id, String luogo, List<TitoloDiViaggio> titoli, boolean attivo) {
+    public Distributore(int id, String luogo, List<TitoloDiViaggio> titoli, boolean attivo) {
         super(id, luogo, titoli);
         this.attivo = attivo;
     }

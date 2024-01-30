@@ -9,7 +9,7 @@ public abstract class Emittente {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenza_emittenti")
     @SequenceGenerator(name = "sequenza_emittenti", initialValue = 1, allocationSize = 1)
-    private long id;
+    private int id;
     private String luogo;
     @OneToMany(mappedBy = "emittente")
     private List<TitoloDiViaggio> titoli;
@@ -17,17 +17,17 @@ public abstract class Emittente {
     public Emittente() {
     }
 
-    public Emittente(Long id, String luogo, List<TitoloDiViaggio> titoli) {
+    public Emittente(int id, String luogo, List<TitoloDiViaggio> titoli) {
         this.id = id;
         this.luogo = luogo;
         this.titoli = titoli;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

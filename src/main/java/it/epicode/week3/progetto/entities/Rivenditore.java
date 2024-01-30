@@ -14,7 +14,7 @@ public class Rivenditore extends Emittente {
     public Rivenditore() {
     }
 
-    public Rivenditore(Long id, String luogo, List<TitoloDiViaggio> titoli, boolean aperto) {
+    public Rivenditore(int id, String luogo, List<TitoloDiViaggio> titoli, boolean aperto) {
         super(id, luogo, titoli);
         this.aperto = aperto;
     }
