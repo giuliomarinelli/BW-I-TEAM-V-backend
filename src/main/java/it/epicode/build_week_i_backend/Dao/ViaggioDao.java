@@ -1,8 +1,8 @@
 package it.epicode.build_week_i_backend.Dao;
 
 
-import it.epicode.week3.progetto.entities.Manutenzione;
-import it.epicode.week3.progetto.entities.Viaggio;
+import it.epicode.build_week_i_backend.entities.Manutenzione;
+import it.epicode.build_week_i_backend.entities.Viaggio;
 import jakarta.persistence.*;
 
 import java.util.List;

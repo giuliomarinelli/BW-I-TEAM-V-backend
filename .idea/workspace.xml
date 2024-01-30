@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="renamed package">
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="resolved">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/EmittenteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/EmittenteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/ManutenzioneDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/ManutenzioneDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/MezzoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/MezzoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/TesseraDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/TesseraDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/TitoloDiViaggioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/TitoloDiViaggioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/UtenteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/UtenteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/ViaggioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/ViaggioDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +35,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "giuliomarinelli"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;giuliomarinelli&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -51,18 +58,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;common__first&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/resources&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/java/it/epicode/week3/progetto/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "common__first",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/java/it/epicode",
+    "onboarding.tips.debug.path": "C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/java/it/epicode/week3/progetto/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\giuli\IdeaProjects\BW-I-GROUP-V-backend\src\main\java\it\epicode" />
       <recent name="C:\Users\giuli\IdeaProjects\BW-I-GROUP-V-backend\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -149,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706610816818</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="resolved">
+      <option name="closed" value="true" />
+      <created>1706622402877</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706622402877</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,6 +175,7 @@
     <MESSAGE value="push" />
     <MESSAGE value="ok" />
     <MESSAGE value="renamed package" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed package" />
+    <MESSAGE value="resolved" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolved" />
   </component>
 </project>

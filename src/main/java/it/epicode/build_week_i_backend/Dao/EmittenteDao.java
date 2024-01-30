@@ -1,7 +1,6 @@
 package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.week3.progetto.entities.Emittente;
-import it.epicode.week3.progetto.entities.Rivenditore;
+import it.epicode.build_week_i_backend.entities.Emittente;
 import jakarta.persistence.*;
 
 public class EmittenteDao {
