@@ -23,8 +23,8 @@ public class UtenteDao {
         et.commit();
         }catch (NullPointerException e){
             e.getMessage();
-        }finally {
             em.close();
+            emf.close();
         }
     }
 

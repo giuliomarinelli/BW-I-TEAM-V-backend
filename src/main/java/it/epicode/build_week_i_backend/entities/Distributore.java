@@ -19,9 +19,7 @@ public class Distributore extends Emittente {
         this.attivo = attivo;
     }
 
-    public boolean isAttivo() {
-        return attivo;
-    }
+//    public boolean isAttivo() {return attivo;}
 
     public void setAttivo(boolean attivo) {
         this.attivo = attivo;

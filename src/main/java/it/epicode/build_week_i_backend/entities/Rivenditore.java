@@ -19,9 +19,9 @@ public class Rivenditore extends Emittente {
         this.aperto = aperto;
     }
 
-    public boolean isAperto() {
-        return aperto;
-    }
+//    public boolean isAperto() {
+//        return aperto; }
+
 
     public void setAperto(boolean aperto) {
         this.aperto = aperto;
