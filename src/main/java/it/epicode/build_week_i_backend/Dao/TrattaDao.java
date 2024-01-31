@@ -8,20 +8,20 @@ import jakarta.persistence.Persistence;
 
 public class TrattaDao {
 
-    private static EntityManagerFactory emf;
-    private static EntityManager em;
+    private EntityManagerFactory emf;
+    private EntityManager em;
 
-    public static void open() {
+    public TrattaDao() {
         emf = Persistence.createEntityManagerFactory("trasporto_pubblico_jpa");
         em = emf.createEntityManager();
     }
 
-    public static void close() {
+    public void close() {
         em.close();
         emf.close();
     }
 
-    public static void save(Tratta t) {
+    public void save(Tratta t) {
         try {
             EntityTransaction et = em.getTransaction();
             et.begin();
@@ -32,7 +32,7 @@ public class TrattaDao {
         }
     }
 
-    public static Tratta findOne(int id) {
+    public Tratta findOne(int id) {
         try {
             return em.find(Tratta.class, id);
         } catch (Exception e) {
@@ -41,7 +41,7 @@ public class TrattaDao {
         return null;
     }
 
-    public static void remove(int id) {
+    public void remove(int id) {
         Tratta t = findOne(id);
         if (t == null) {
             System.out.println("Si sta cercando di eliminare un elemento che non esiste");

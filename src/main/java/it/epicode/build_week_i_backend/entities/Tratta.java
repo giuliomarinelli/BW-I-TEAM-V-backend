@@ -92,9 +92,7 @@ public class Tratta {
                 "id=" + id +
                 ", zonaPartenza='" + zonaPartenza + '\'' +
                 ", zonaArrivo='" + zonaArrivo + '\'' +
-                ", tempoMedioPercorrenza=" + tempoMedioPercorrenza +
-                ", mezzi=" + mezzi +
-                ", viaggi=" + viaggi +
-                '}';
+                ", tempoMedioPercorrenza=" + tempoMedioPercorrenza;
+
     }
 }

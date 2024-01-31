@@ -8,23 +8,23 @@ import jakarta.persistence.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class ViaggioDao {
-    private static EntityManagerFactory emf;
-    private static EntityManager em;
+    private EntityManagerFactory emf;
+    private EntityManager em;
 
-    public static void open() {
+    public ViaggioDao() {
         emf = Persistence.createEntityManagerFactory("trasporto_pubblico_jpa");
         em = emf.createEntityManager();
     }
 
-    public static void close() {
+    public void close() {
         em.close();
         emf.close();
     }
 
-    public static void save(Viaggio v) {
+    public void save(Viaggio v) {
         Query query = em.createQuery("SELECT m FROM Manutenzione m WHERE m.mezzo.id = :id");
         query.setParameter("id", v.getMezzo().getId());
         List<Manutenzione> lista = query.getResultList();
@@ -43,7 +43,7 @@ public class ViaggioDao {
         }
     }
 
-    public static Viaggio findOne(int id) {
+    public Viaggio findOne(int id) {
         try {
             return em.find(Viaggio.class, id);
         } catch (Exception e) {
@@ -52,7 +52,7 @@ public class ViaggioDao {
         return null;
     }
 
-    public static void remove(int id) {
+    public void remove(int id) {
         Viaggio v = findOne(id);
         if (v == null) {
             System.out.println("Si sta cercando di eliminare un elemento che non esiste");
