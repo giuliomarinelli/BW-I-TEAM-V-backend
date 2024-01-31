@@ -167,10 +167,23 @@ public class Main {
 //        int count1 = titoloDiViaggioDAO.numeroBigliettiTotaliEmessi(LocalDateTime.of(LocalDate.of(2024, 1, 14), LocalTime.of(0, 0,0)),
 //               LocalDateTime.of(LocalDate.of(2024, 1, 30), LocalTime.of(0, 0,0)));
 //        System.out.println(count1);
-        int count2 = titoloDiViaggioDAO.numeroAbbonamentiTotaliEmessi(LocalDateTime.of(LocalDate.of(2024, 1, 1), LocalTime.of(0, 0,0)),
-               LocalDateTime.of(LocalDate.of(2024, 1, 30), LocalTime.of(0, 0,0)), 2);
-        System.out.println(count2);
+//        int count2 = titoloDiViaggioDAO.numeroAbbonamentiTotaliEmessi(LocalDateTime.of(LocalDate.of(2024, 1, 1), LocalTime.of(0, 0,0)),
+//               LocalDateTime.of(LocalDate.of(2024, 1, 30), LocalTime.of(0, 0,0)), 2);
+//        System.out.println(count2);
 
+//       Viaggio viaggio = viaggioDao.findOne(1);
+//       viaggio.setMezzo(mezzoDao.getById(2));
+//       viaggio.setOrarioDiPartenza(LocalDateTime.of(LocalDate.of(2024, 1, 15), LocalTime.of(12, 0,0)));
+//       viaggioDao.save(viaggio);
+//
+//        titoloDiViaggioDAO.vidimaTitolo(2, viaggio);
+//        titoloDiViaggioDAO.vidimaTitolo(4, viaggio);
+
+
+
+//        int count1 = titoloDiViaggioDAO.numeroTitoliDiViaggioVidimatiPerMezzo(2);
+//        System.out.println(count1);
+        //  System.out.println(mezzoDao.contaViaggi(2));
 
     }
 }

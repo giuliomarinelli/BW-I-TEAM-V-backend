@@ -41,4 +41,8 @@ public class MezzoDao {
         emf.close();
     }
 
+    public int contaViaggi(int id){
+        Mezzo mezzo = getById(id);
+        return mezzo.getViaggi().size();
+    }
 }

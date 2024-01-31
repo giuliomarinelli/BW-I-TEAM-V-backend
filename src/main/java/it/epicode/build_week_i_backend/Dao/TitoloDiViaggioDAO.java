@@ -1,9 +1,6 @@
 package it.epicode.build_week_i_backend.Dao;
 
-import it.epicode.build_week_i_backend.entities.Abbonamento;
-import it.epicode.build_week_i_backend.entities.Tessera;
-import it.epicode.build_week_i_backend.entities.TitoloDiViaggio;
-import it.epicode.build_week_i_backend.entities.Viaggio;
+import it.epicode.build_week_i_backend.entities.*;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -16,12 +13,12 @@ public class TitoloDiViaggioDAO {
     EntityManagerFactory emf;
     EntityManager em;
 
-    public TitoloDiViaggioDAO(){
+    public TitoloDiViaggioDAO() {
         emf = Persistence.createEntityManagerFactory("trasporto_pubblico_jpa");
         em = emf.createEntityManager();
     }
 
-    public void emettiTitolo(TitoloDiViaggio t){
+    public void emettiTitolo(TitoloDiViaggio t) {
         if (!t.getEmittente().isActive()) {
             System.out.println("L'emittente non è attivo");
             return;
@@ -32,11 +29,11 @@ public class TitoloDiViaggioDAO {
         et.commit();
     }
 
-    public TitoloDiViaggio getById(int id){
+    public TitoloDiViaggio getById(int id) {
         return em.find(TitoloDiViaggio.class, id);
     }
 
-    public void eliminaTitolo(int id){
+    public void eliminaTitolo(int id) {
         EntityTransaction et = em.getTransaction();
         et.begin();
         TitoloDiViaggio t = getById(id);
@@ -44,7 +41,7 @@ public class TitoloDiViaggioDAO {
         et.commit();
     }
 
-    public void vidimaTitolo(int id, Viaggio v){
+    public void vidimaTitolo(int id, Viaggio v) {
         TitoloDiViaggio t = getById(id);
         if (t.getDataAttivazione() != null) {
             System.out.println("Il titolo di viaggio è già stato vidimato");
@@ -72,7 +69,8 @@ public class TitoloDiViaggioDAO {
         return ((List<Abbonamento>) q.getResultList()).stream().filter(a -> a.getId() == idEmittente)
                 .toList().size();
     }
-public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
+
+    public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
         Query q = em.createQuery("SELECT e FROM Biglietto e WHERE e.dataEmissione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
@@ -121,16 +119,12 @@ public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTim
         return Integer.parseInt(q.getSingleResult().toString());
     }
 
-    public int numeroTitoliDiViaggioVidimatiPerMezzo(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idMezzo) {
+
+    public int numeroTitoliDiViaggioVidimatiPerMezzo(int idMezzo) {
         MezzoDao mezzoDao = new MezzoDao();
-        Query q = em.createQuery("SELECT t FROM TitoloDiViaggio t " +
-                "WHERE t.dataDiAttivazione IS NOT NULL AND t.dataDiAttivazione BETWEEN :inizio AND :fine");
-        q.setParameter("inizio", inizioPeriodo);
-        q.setParameter("fine", finePeriodo);
-//        List<Viaggio> viaggi = mezzoDao.getById(idMezzo).getViaggi();
-//        viaggi.stream().filter(v -> v.get)
-        return 0;
+        Mezzo mezzo = mezzoDao.getById(idMezzo);
+        int contatore =  mezzo.getViaggi().stream().flatMap(v-> v.getTitoliDiViaggio().stream()).toList().size();
+
+        return contatore;
     }
-
-
 }

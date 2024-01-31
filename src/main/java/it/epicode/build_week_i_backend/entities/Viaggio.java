@@ -7,6 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "viaggi")
+
 public class Viaggio {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,  generator = "viaggio_id_gen")
