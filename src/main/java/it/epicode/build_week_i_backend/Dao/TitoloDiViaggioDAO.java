@@ -63,7 +63,7 @@ public class TitoloDiViaggioDAO {
     }
 
     public int numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
-        Query q = em.createQuery("SELECT a FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio ");
+        Query q = em.createQuery("SELECT a FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine");
 //        AND :fine AND a.emittente = :e
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
