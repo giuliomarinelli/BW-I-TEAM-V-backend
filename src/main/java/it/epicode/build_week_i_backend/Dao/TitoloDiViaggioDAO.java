@@ -59,11 +59,12 @@ public class TitoloDiViaggioDAO {
         Query q = em.createQuery("SELECT COUNT(a) FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return Integer.parseInt(q.getSingleResult().toString());
+        return (Integer) q.getSingleResult();
     }
 
     public int numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
-        Query q = em.createQuery("SELECT a FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine");
+        Query q = em.createQuery("SELECT a FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio ");
+//        AND :fine AND a.emittente = :e
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
         return ((List<Abbonamento>) q.getResultList()).stream().filter(a -> a.getId() == idEmittente)
