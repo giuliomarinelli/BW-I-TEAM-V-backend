@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="push..">
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="Merge remote-tracking branch 'origin/shared_work' into shared_work&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/it/epicode/build_week_i_backend/Main.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/UtenteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/UtenteDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="shared_work_two" />
+        <entry key="$PROJECT_DIR$" value="shared_work" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,9 +67,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "shared__work__two",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Marco/OneDrive/Desktop/progettoSettimanale-S3/BW-I-TEAM-V-backend/src/main/resources",
+    "last_opened_file_path": "C:/Users/Marco/IdeaProjects/progetto-settimana2",
     "onboarding.tips.debug.path": "C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/java/it/epicode/week3/progetto/Main.java"
   }
 }]]></component>
@@ -175,23 +175,7 @@
       <option name="project" value="LOCAL" />
       <updated>1706703304712</updated>
     </task>
-    <task id="LOCAL-00011" summary="push">
-      <option name="closed" value="true" />
-      <created>1706720556478</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1706720556478</updated>
-    </task>
-    <task id="LOCAL-00012" summary="push..">
-      <option name="closed" value="true" />
-      <created>1706720609878</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1706720609878</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,8 +199,6 @@
     <MESSAGE value="test funzionalità relazioni ok" />
     <MESSAGE value="work in progress" />
     <MESSAGE value="Merge remote-tracking branch 'origin/shared_work' into shared_work&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/it/epicode/build_week_i_backend/Main.java" />
-    <MESSAGE value="push" />
-    <MESSAGE value="push.." />
-    <option name="LAST_COMMIT_MESSAGE" value="push.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/shared_work' into shared_work&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/it/epicode/build_week_i_backend/Main.java" />
   </component>
 </project>
