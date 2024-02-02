@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="push..">
+    <list default="true" id="a1356ca5-4d3f-4bd7-9d19-93912bf25136" name="Changes" comment="test vidimazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/TitoloDiViaggioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Dao/TitoloDiViaggioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/build_week_i_backend/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +26,9 @@
     <option name="BRANCH" value="origin/common_first" />
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="MarcoZiino96 &lt;141355693+marcoziino96@users.noreply.github.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="shared_work_two" />
+        <entry key="$PROJECT_DIR$" value="shared_work" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,15 +63,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "shared__work__two",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Marco/OneDrive/Desktop/progettoSettimanale-S3/BW-I-TEAM-V-backend/src/main/resources",
+    "last_opened_file_path": "C:/Users/gabri/IdeaProjects/BW-I-TEAM-V-backend/src/main",
     "onboarding.tips.debug.path": "C:/Users/giuli/IdeaProjects/BW-I-GROUP-V-backend/src/main/java/it/epicode/week3/progetto/Main.java"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Marco\OneDrive\Desktop\progettoSettimanale-S3\BW-I-TEAM-V-backend\src\main\resources" />
       <recent name="C:\Users\gabri\IdeaProjects\BW-I-TEAM-V-backend\src\main" />
       <recent name="C:\Users\giuli\IdeaProjects\BW-I-GROUP-V-backend\src\main\resources" />
     </key>
@@ -82,7 +77,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
       </set>
     </attachedChunks>
   </component>
@@ -151,72 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706621917944</updated>
     </task>
-    <task id="LOCAL-00008" summary="add logback">
+    <task id="LOCAL-00008" summary="test vidimazione">
       <option name="closed" value="true" />
-      <created>1706631307982</created>
+      <created>1706628483094</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1706631307982</updated>
+      <updated>1706628483094</updated>
     </task>
-    <task id="LOCAL-00009" summary="work in progress">
-      <option name="closed" value="true" />
-      <created>1706703166784</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1706703166784</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/shared_work' into shared_work&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/it/epicode/build_week_i_backend/Main.java">
-      <option name="closed" value="true" />
-      <created>1706703304712</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1706703304712</updated>
-    </task>
-    <task id="LOCAL-00011" summary="push">
-      <option name="closed" value="true" />
-      <created>1706720556478</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1706720556478</updated>
-    </task>
-    <task id="LOCAL-00012" summary="push..">
-      <option name="closed" value="true" />
-      <created>1706720609878</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1706720609878</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primo commit Gabriele" />
     <MESSAGE value="commit dao" />
     <MESSAGE value="commit" />
     <MESSAGE value="commit completo" />
-    <MESSAGE value="add logback" />
-    <MESSAGE value="..." />
-    <MESSAGE value="test funzionalità relazioni ok" />
-    <MESSAGE value="work in progress" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/shared_work' into shared_work&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/it/epicode/build_week_i_backend/Main.java" />
-    <MESSAGE value="push" />
-    <MESSAGE value="push.." />
-    <option name="LAST_COMMIT_MESSAGE" value="push.." />
+    <MESSAGE value="test vidimazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="test vidimazione" />
   </component>
 </project>

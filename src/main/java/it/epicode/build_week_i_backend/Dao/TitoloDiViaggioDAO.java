@@ -55,46 +55,47 @@ public class TitoloDiViaggioDAO {
         et.commit();
     }
 
-    public int numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
+    public long numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
         Query q = em.createQuery("SELECT COUNT(a) FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return (Integer) q.getSingleResult();
+        return (Long) q.getSingleResult();
     }
 
-    public int numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
+    public long numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
         EmittenteDao emittenteDao = new EmittenteDao();
         Emittente e = emittenteDao.getById(idEmittente);
         Query q = em.createQuery("SELECT COUNT(a) FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine AND a.emittente = :e");
         q.setParameter("e", e);
         q.setParameter("inizio", inizioPeriodo);
-        return (Integer) q.getSingleResult();
+        q.setParameter("fine", finePeriodo);
+        return (Long) q.getSingleResult();
 
     }
 
-    public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
+    public long numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
         EmittenteDao emittenteDao = new EmittenteDao();
         Emittente e = emittenteDao.getById(idEmittente);
-        Query q = em.createQuery("SELECT COUNT(e) FROM Biglietto e WHERE e.dataEmissione BETWEEN :inizio AND :fine AND a.emittente = :e");
+        Query q = em.createQuery("SELECT COUNT(e) FROM Biglietto e WHERE e.dataEmissione BETWEEN :inizio AND :fine AND e.emittente = :e");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
         q.setParameter("e", e);
-        return (Integer) q.getSingleResult();
+        return (Long) q.getSingleResult();
     }
 
-    public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
+    public long numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
         Query q = em.createQuery("SELECT COUNT(b) FROM Biglietto b WHERE b.dataEmissione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return (Integer) q.getSingleResult();
+        return (Long) q.getSingleResult();
     }
 
-    public int numeroTitoliDiViaggioEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
+    public long numeroTitoliDiViaggioEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
         return numeroBigliettiTotaliEmessi(inizioPeriodo, finePeriodo) +
                 numeroAbbonamentiTotaliEmessi(inizioPeriodo, finePeriodo);
     }
 
-    public int numeroTitoliDiViaggioEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
+    public long numeroTitoliDiViaggioEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
         return numeroBigliettiTotaliEmessi(inizioPeriodo, finePeriodo, idEmittente) +
                 numeroAbbonamentiTotaliEmessi(inizioPeriodo, finePeriodo, idEmittente);
     }
@@ -111,16 +112,18 @@ public class TitoloDiViaggioDAO {
 
         if (a.getDataScadenza().isBefore(LocalDateTime.now())) return false;
 
+        if (a.getDataAttivazione().isAfter(LocalDateTime.now()) || a.getDataAttivazione() == null) return false;
+
         return true;
 
     }
 
-    public int numeroTitoliDiViaggioVidimati(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
+    public long numeroTitoliDiViaggioVidimati(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
         Query q = em.createQuery("SELECT COUNT(t) FROM TitoloDiViaggio t " +
-                "WHERE t.dataDiAttivazione IS NOT NULL AND t.dataDiAttivazione BETWEEN :inizio AND :fine");
+                "WHERE t.dataAttivazione IS NOT NULL AND t.dataAttivazione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return (Integer) q.getSingleResult();
+        return (Long) q.getSingleResult();
     }
 
 
