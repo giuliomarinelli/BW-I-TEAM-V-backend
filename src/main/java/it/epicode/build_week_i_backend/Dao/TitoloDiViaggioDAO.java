@@ -63,27 +63,30 @@ public class TitoloDiViaggioDAO {
     }
 
     public int numeroAbbonamentiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
-        Query q = em.createQuery("SELECT a FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine");
-//        AND :fine AND a.emittente = :e
+        EmittenteDao emittenteDao = new EmittenteDao();
+        Emittente e = emittenteDao.getById(idEmittente);
+        Query q = em.createQuery("SELECT COUNT(a) FROM Abbonamento a WHERE a.dataEmissione BETWEEN :inizio AND :fine AND a.emittente = :e");
+        q.setParameter("e", e);
         q.setParameter("inizio", inizioPeriodo);
-        q.setParameter("fine", finePeriodo);
-        return ((List<Abbonamento>) q.getResultList()).stream().filter(a -> a.getId() == idEmittente)
-                .toList().size();
+        return (Integer) q.getSingleResult();
+
     }
 
     public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo, int idEmittente) {
-        Query q = em.createQuery("SELECT e FROM Biglietto e WHERE e.dataEmissione BETWEEN :inizio AND :fine");
+        EmittenteDao emittenteDao = new EmittenteDao();
+        Emittente e = emittenteDao.getById(idEmittente);
+        Query q = em.createQuery("SELECT COUNT(e) FROM Biglietto e WHERE e.dataEmissione BETWEEN :inizio AND :fine AND a.emittente = :e");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return ((List<Abbonamento>) q.getResultList()).stream().filter(a -> a.getId() == idEmittente)
-                .toList().size();
+        q.setParameter("e", e);
+        return (Integer) q.getSingleResult();
     }
 
     public int numeroBigliettiTotaliEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
         Query q = em.createQuery("SELECT COUNT(b) FROM Biglietto b WHERE b.dataEmissione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return Integer.parseInt(q.getSingleResult().toString());
+        return (Integer) q.getSingleResult();
     }
 
     public int numeroTitoliDiViaggioEmessi(LocalDateTime inizioPeriodo, LocalDateTime finePeriodo) {
@@ -117,14 +120,14 @@ public class TitoloDiViaggioDAO {
                 "WHERE t.dataDiAttivazione IS NOT NULL AND t.dataDiAttivazione BETWEEN :inizio AND :fine");
         q.setParameter("inizio", inizioPeriodo);
         q.setParameter("fine", finePeriodo);
-        return Integer.parseInt(q.getSingleResult().toString());
+        return (Integer) q.getSingleResult();
     }
 
 
     public int numeroTitoliDiViaggioVidimatiPerMezzo(int idMezzo) {
         MezzoDao mezzoDao = new MezzoDao();
         Mezzo mezzo = mezzoDao.getById(idMezzo);
-        int contatore =  mezzo.getViaggi().stream().flatMap(v-> v.getTitoliDiViaggio().stream()).toList().size();
+        int contatore = mezzo.getViaggi().stream().flatMap(v -> v.getTitoliDiViaggio().stream()).toList().size();
 
         return contatore;
     }
